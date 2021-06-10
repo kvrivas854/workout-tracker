@@ -19,7 +19,6 @@ let shouldNavigateAway = false;
 
 async function initExercise() {
   let workout;
-
   if (location.search.split("=")[1] === undefined) {
     workout = await API.createWorkout()
     console.log(workout)
@@ -56,7 +55,7 @@ function validateInputs() {
     if (nameInput.value.trim() === "") {
       isValid = false;
     }
-
+    
     if (weightInput.value.trim() === "") {
       isValid = false;
     }
